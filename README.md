@@ -27,7 +27,7 @@
    cd codepred
    ```
 
-3. Run all tests:
+3. Run all tests (optional):
 
    ```bash
    gradlew test
