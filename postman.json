@@ -1,0 +1,110 @@
+{
+  "info": {
+    "name": "Codepred Announcements API",
+    "_postman_id": "12345678-abcd-ef00-1234-56789abcdef0",
+    "description": "Collection for testing the Announcements API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Announcement",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"content\": \"New test announcement\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/announcements",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "announcements"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Announcement - Expect Error",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/announcements",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "announcements"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Announcement by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/announcements/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "announcements", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Announcement",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"content\": \"Updated announcement content\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/announcements/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "announcements", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Announcement",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/announcements/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "announcements", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
