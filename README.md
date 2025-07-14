@@ -6,18 +6,35 @@
 
 - Java 17  
 - Jakarta Validation  
-- H2 
+- H2 (in-memory database)  
 - JPA (Hibernate)  
 - Gradle  
-- Postman 
+- Postman  
 
 ---
 
 ## Running the Application
 
-1. **Clone the repository:**
+1. Clone the repository:
 
-   ```cmd
+   ```bash
    git clone https://github.com/kamiloses/Codepred.git
-   cd Codepred
-   gradlew bootRun
+   ```
+   
+ 
+2. Open the file:
+   ```bash
+   cd codepred
+   ```
+
+3. Run all tests:
+
+   ```bash
+   gradlew test
+   
+ 4. Start the application:
+
+     ```bash
+      gradlew bootRun
+      ```
+  5. Copy postman.json and paste it into Postman’s import.
