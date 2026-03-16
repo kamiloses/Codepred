@@ -14,6 +14,7 @@ Prosta aplikacja backendowa w **Spring Boot** do zarządzania zadaniami TODO. AP
 
 
 
+
 ---
 
 ## Technologie
@@ -21,12 +22,28 @@ Prosta aplikacja backendowa w **Spring Boot** do zarządzania zadaniami TODO. AP
 - Spring Boot 4 
 - Spring Data JPA  
 - H2 Database  
-- Maven  
+- Maven
+- Docker
 - Springdoc OpenAPI (Swagger UI)
 
 ---
+<br><br><br>
+# Uruchomienie aplikacji
 
-## Uruchomienie aplikacji
+## 1. Przez Docker (zalecane)
+
+### Krok 1: Sklonuj repozytorium
+```bash
+git clone https://github.com/kamiloses/Codepred.git
+cd Codepred
+```
+
+### Krok 2: Zbuduj obraz
+```bash
+docker compose up --build
+```
+<br><br>
+## 2. Uruchamianie lokalnie
 
 ### 1. Sklonuj repozytorium
 
@@ -47,11 +64,7 @@ mvn test
 mvn spring-boot:run
 ```
 
-Aplikacja uruchomi się domyślnie na:
-
-```
-http://localhost:8080
-```
+ <br><br><br>
 
 ### Dokumentacja API (Swagger)
 
@@ -62,8 +75,15 @@ http://localhost:8080/swagger-ui/index.html
 ```
 
 
+Aplikacja uruchomi się domyślnie na:
+
+```
+http://localhost:8080
+```
 
 ## Postman Collection
+Przykładowe requesty do API znajdują się w pliku **postman_collection.json**
 
-Przykładowe requesty do API znajdują się w pliku **postman_collection.json**.
+
+
 
