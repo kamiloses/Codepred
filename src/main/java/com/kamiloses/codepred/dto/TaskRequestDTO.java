@@ -1,22 +1,23 @@
 package com.kamiloses.codepred.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.kamiloses.codepred.enums.Status;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.*;
 
+@Getter
+@Builder
 @AllArgsConstructor
-@Setter
 @NoArgsConstructor
-@Getter//todo zostawic czy nie oraz dodać walidacje
 public class TaskRequestDTO {
-
+    @NotBlank(message = "Title cannot be empty")
+    @Size(max = 100, message = "Title cannot be longer than 100 characters")
     private String title;
 
+    @Size(max = 1000, message = "Description cannot be longer than 1000 characters")
     private String description;
 
-    private String status;
-
+    private Status status;
 
 
 }

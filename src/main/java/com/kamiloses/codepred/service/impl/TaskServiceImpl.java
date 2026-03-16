@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class TaskServiceImpl implements TaskService {
@@ -21,10 +22,7 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public TaskResponseDTO createTask(TaskRequestDTO taskRequestDTO) {
         Task taskEntity = TaskMapper.toEntity(taskRequestDTO);
-
         Task savedTask = taskRepository.save(taskEntity);
-
-
         return TaskMapper.toDTO(savedTask);
     }
 
@@ -51,7 +49,7 @@ public class TaskServiceImpl implements TaskService {
 
         task.setTitle(taskRequestDTO.getTitle());
         task.setDescription(taskRequestDTO.getDescription());
-        task.setStatus(taskRequestDTO.getStatus() != null ? taskRequestDTO.getStatus() : task.getStatus());
+        task.setStatus(taskRequestDTO.getStatus());
 
         Task updatedTask = taskRepository.save(task);
         return TaskMapper.toDTO(updatedTask);

@@ -25,9 +25,7 @@ public class TaskMapper {
         Task task = new Task();
         task.setTitle(dto.getTitle());
         task.setDescription(dto.getDescription());
-        task.setStatus(dto.getStatus() != null && !dto.getStatus().isEmpty()
-                ? Status.valueOf(dto.getStatus())
-                : Status.NEW); //todo popraw
+        task.setStatus(dto.getStatus() != null ? dto.getStatus() : Status.NEW);
         return task;
     }
 }

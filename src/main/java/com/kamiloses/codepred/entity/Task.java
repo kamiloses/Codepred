@@ -21,7 +21,7 @@ public class Task {
     private Long id;
 
     @NotBlank(message = "Title cannot be empty")
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     private String title;
 
     @Column(length = 1000)
